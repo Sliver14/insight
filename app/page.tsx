@@ -1,65 +1,205 @@
-import Image from "next/image";
-
-export default function Home() {
+"use client"
+export default function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div className="min-h-screen bg-[#0A0A0A] text-white relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/a80947ce53306e0203f5f8c1a48af8fc975e481a?width=2880')",
+          backgroundPosition: 'center',
+        }}
+      />
+      
+      {/* Content */}
+      <div className="relative z-10 flex flex-col px-8 py-12 md:px-12 lg:px-[70px] lg:py-[60px] gap-16 lg:gap-[100px]">
+        {/* Header/Navigation */}
+        <header className="flex justify-between items-center w-full">
+          <div className="flex items-center gap-8 lg:gap-[100px]">
+            <img 
+              src="https://api.builder.io/api/v1/image/assets/TEMP/951358745f6fe9fe117d087ae8ed54a94dba4eca?width=276" 
+              alt="Insight NovaTech"
+              className="h-8 lg:h-[33.273px] w-auto"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <nav className="hidden md:flex items-center gap-8 lg:gap-[100px]">
+              <a href="#" className="text-white font-medium text-base lg:text-xl hover:opacity-80 transition-opacity">
+                Our Company
+              </a>
+              <a href="#" className="text-white font-medium text-base lg:text-xl hover:opacity-80 transition-opacity">
+                About us
+              </a>
+            </nav>
+          </div>
+          
+          <div className="flex items-center gap-12 lg:gap-[88px]">
+            <a href="#" className="hidden md:block text-white font-medium text-base lg:text-xl hover:opacity-80 transition-opacity">
+              Contact us
+            </a>
+            <button className="flex flex-col justify-center gap-1.5 w-6 h-4 hover:opacity-80 transition-opacity" aria-label="Menu">
+              <div className="w-6 h-[2px] bg-white rounded"></div>
+              <div className="w-6 h-[2px] bg-white/70 rounded"></div>
+            </button>
+          </div>
+        </header>
+
+        {/* Hero Section */}
+        <div className="flex flex-col gap-3 lg:gap-[13px] w-full">
+          <h1 className="text-5xl md:text-7xl lg:text-[96px] font-extrabold leading-[110%] tracking-tight">
+            Web and Mobile<br />Application
+          </h1>
+          <h2 className="text-3xl md:text-5xl lg:text-[64px] font-medium leading-[110%] text-white/50 font-poppins">
+            Development Company
+          </h2>
         </div>
-      </main>
+
+        {/* Content Section */}
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-[145px]">
+          {/* Phone Mockup with Button */}
+          <div className="relative w-full lg:w-[719px] h-[400px] md:h-[600px] lg:h-[752px] flex-shrink-0 overflow-hidden">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/5da0c993f630fabb6af3a010329f43e33edfe9b5?width=1438"
+              alt="Mobile App Showcase"
+              className="w-full h-full object-cover rounded-br-[150px] lg:rounded-br-[258px]"
+            />
+            <div className="absolute top-0 left-0 w-[180px] md:w-[250px] lg:w-[309px] h-[200px] md:h-[280px] lg:h-[340px] bg-[#0A0A0A]"></div>
+
+            <button className="absolute top-3 left-5 flex items-center justify-center gap-2.5 px-5 py-4 rounded-full bg-[#292929] hover:bg-[#3a3a3a] transition-all hover:scale-105 cursor-pointer">
+              <span className="text-white font-semibold text-base md:text-lg lg:text-xl whitespace-nowrap">
+                Work with us
+              </span>
+              <svg 
+                width="23" 
+                height="23" 
+                viewBox="0 0 32 32" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 lg:w-[22.477px] lg:h-[22.644px]"
+              >
+                <path 
+                  fillRule="evenodd" 
+                  clipRule="evenodd" 
+                  d="M11.1907 19.081C11.0811 18.9304 11.0362 18.7421 11.066 18.5575C11.0958 18.3729 11.1978 18.2072 11.3495 18.0967L17.978 13.2717L13.7471 12.6226C13.6555 12.6086 13.5677 12.5766 13.4887 12.5286C13.4097 12.4805 13.3411 12.4174 13.2867 12.3427C13.2323 12.268 13.1933 12.1833 13.1719 12.0934C13.1505 12.0034 13.1471 11.91 13.1618 11.8185C13.1766 11.727 13.2092 11.6391 13.2579 11.56C13.3066 11.4808 13.3704 11.4119 13.4456 11.3571C13.5209 11.3024 13.6061 11.2629 13.6964 11.2408C13.7867 11.2188 13.8803 11.2147 13.9719 11.2288L19.8848 12.1374C19.9765 12.1514 20.0644 12.1833 20.1434 12.2313C20.2225 12.2793 20.2912 12.3424 20.3455 12.4171C20.3999 12.4918 20.4389 12.5766 20.4603 12.6666C20.4817 12.7565 20.485 12.85 20.4701 12.9415L19.5177 18.8475C19.5029 18.939 19.4702 19.0268 19.4215 19.106C19.3728 19.1852 19.3091 19.2541 19.2338 19.3088C19.1586 19.3636 19.0734 19.4031 18.9831 19.4251C18.8928 19.4471 18.7992 19.4512 18.7076 19.4372C18.5225 19.4087 18.3569 19.308 18.2471 19.1572C18.1928 19.0826 18.1538 18.9978 18.1323 18.9079C18.1109 18.818 18.1075 18.7246 18.1222 18.633L18.8047 14.4075L12.1762 19.2325C12.0245 19.3429 11.8354 19.389 11.6506 19.3606C11.4658 19.3322 11.3004 19.2316 11.1907 19.081Z" 
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Right Content */}
+          <div className="flex flex-col gap-6 lg:gap-[10px] flex-1 max-w-full lg:max-w-[472px]">
+            <p className="text-xl md:text-2xl lg:text-[32px] font-medium leading-[118%] text-white">
+              Drawing on decades of expertise, Utility builds new products with innovative client partners.
+            </p>
+
+            <div className="flex flex-wrap gap-x-4 gap-y-2 mt-4 lg:mt-[10px]">
+              <span className="text-white/50 font-medium text-sm md:text-base lg:text-xl leading-[118%] font-poppins">
+                Tech Development
+              </span>
+              <span className="text-white/50 font-medium text-sm md:text-base lg:text-xl leading-[118%] font-poppins">
+                Product Design
+              </span>
+              <span className="text-white/50 font-medium text-sm md:text-base lg:text-xl leading-[118%] font-poppins">
+                AI Solutions
+              </span>
+              <span className="text-white/50 font-medium text-sm md:text-base lg:text-xl leading-[118%] font-poppins">
+                Growth Marketing
+              </span>
+              <span className="text-white/50 font-medium text-sm md:text-base lg:text-xl leading-[118%] font-poppins">
+                Digital Transformation
+              </span>
+            </div>
+
+            <a href="#" className="flex items-center gap-2 mt-6 lg:mt-[10px] hover:opacity-80 transition-opacity group">
+              <span className="text-white/50 group-hover:text-white/70 font-medium text-sm md:text-base lg:text-xl leading-[118%] font-poppins transition-colors">
+                View all services
+              </span>
+              <svg 
+                width="23" 
+                height="23" 
+                viewBox="0 0 32 32" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 lg:w-[22.477px] lg:h-[22.644px]"
+              >
+                <path 
+                  fillRule="evenodd" 
+                  clipRule="evenodd" 
+                  d="M11.1907 19.081C11.0811 18.9304 11.0362 18.7421 11.066 18.5575C11.0958 18.3729 11.1978 18.2072 11.3495 18.0967L17.978 13.2717L13.7471 12.6226C13.6555 12.6086 13.5677 12.5766 13.4887 12.5286C13.4097 12.4805 13.3411 12.4174 13.2867 12.3427C13.2323 12.268 13.1933 12.1833 13.1719 12.0934C13.1505 12.0034 13.1471 11.91 13.1618 11.8185C13.1766 11.727 13.2092 11.6391 13.2579 11.56C13.3066 11.4808 13.3704 11.4119 13.4456 11.3571C13.5209 11.3024 13.6061 11.2629 13.6964 11.2408C13.7867 11.2188 13.8803 11.2147 13.9719 11.2288L19.8848 12.1374C19.9765 12.1514 20.0644 12.1833 20.1434 12.2313C20.2225 12.2793 20.2912 12.3424 20.3455 12.4171C20.3999 12.4918 20.4389 12.5766 20.4603 12.6666C20.4817 12.7565 20.485 12.85 20.4701 12.9415L19.5177 18.8475C19.5029 18.939 19.4702 19.0268 19.4215 19.106C19.3728 19.1852 19.3091 19.2541 19.2338 19.3088C19.1586 19.3636 19.0734 19.4031 18.9831 19.4251C18.8928 19.4471 18.7992 19.4512 18.7076 19.4372C18.5225 19.4087 18.3569 19.308 18.2471 19.1572C18.1928 19.0826 18.1538 18.9978 18.1323 18.9079C18.1109 18.818 18.1075 18.7246 18.1222 18.633L18.8047 14.4075L12.1762 19.2325C12.0245 19.3429 11.8354 19.389 11.6506 19.3606C11.4658 19.3322 11.3004 19.2316 11.1907 19.081Z" 
+                  fill="white" 
+                  fillOpacity="0.5"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        {/* Brand Logos Section */}
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-[150px] px-0 md:px-[37px] mt-8 lg:mt-0">
+          <svg width="136" height="28" viewBox="0 0 136 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 md:h-7 w-auto opacity-50 hover:opacity-70 transition-opacity">
+            <g clipPath="url(#clip0_verizon)">
+              <path d="M100.387 26.4996H106.324V15.6074C106.324 13.1159 107.762 11.3658 109.898 11.3658C111.952 11.3658 113.021 12.8071 113.021 14.8868V26.4996H118.957V13.7543C118.957 9.43035 116.369 6.38298 112.178 6.38298C109.508 6.38298 107.639 7.53605 106.242 9.63625H106.119V6.95955H100.367L100.387 26.4996ZM88.7196 6.42416C82.516 6.42416 78.3666 10.8923 78.3666 16.7811C78.3666 22.6287 82.516 27.138 88.7196 27.138C94.9232 27.138 99.0726 22.6287 99.0726 16.7811C99.0931 10.8923 94.9232 6.42416 88.7196 6.42416ZM88.6785 22.7317C85.8643 22.7317 84.3647 20.3638 84.3647 16.7811C84.3647 13.1572 85.8437 10.8305 88.6785 10.8305C91.4927 10.8305 93.0539 13.1572 93.0539 16.7811C93.0744 20.3638 91.5132 22.7317 88.6785 22.7317ZM61.4402 26.4996H78.1201V21.805H68.6709V21.6815L77.7092 11.5306V6.93895H61.4402V11.654H70.5813V11.7776L61.4402 22.0109V26.4996ZM53.8192 26.4996H59.7969V6.95955H53.8192V26.4996ZM39.9536 26.4996H45.9107V17.5224C45.9107 13.4454 48.3551 11.6334 52.0732 12.1482H52.1964V7.00065C51.8883 6.87715 51.5391 6.85655 50.9845 6.85655C48.6633 6.85655 47.1021 7.92725 45.7669 10.2127H45.6436V6.95955H39.9536V26.4996ZM29.0254 22.7523C26.3961 22.7523 24.7938 21.0433 24.4857 18.4076H38.5362C38.5773 14.2073 37.468 10.851 35.1468 8.75085C33.5035 7.22715 31.3466 6.38298 28.594 6.38298C22.7191 6.38298 18.6519 10.8511 18.6519 16.6987C18.6519 22.5876 22.5342 27.0761 28.9843 27.0761C31.4288 27.0761 33.3597 26.4172 34.962 25.326C36.6669 24.1523 37.8994 22.4227 38.2281 20.7137H32.5175C31.9629 21.9903 30.7715 22.7523 29.0254 22.7523ZM28.7173 10.6452C30.8125 10.6452 32.2505 12.21 32.497 14.4955H24.5268C24.9992 12.1894 26.2523 10.6452 28.7173 10.6452ZM6.77876 26.4996H13.0234L19.8022 6.95955H13.8246L10.0243 19.5196H9.9422L6.14197 6.95955H0L6.77876 26.4996ZM53.8192 0H59.7969V5.31228H53.8192V0Z" fill="#7F7F7F"/>
+              <path d="M132.104 3.75781L124.729 19.5711L121.956 13.5793H118.957L123.517 23.3803H125.941L135.082 3.75781H132.104Z" fill="#7F7F7F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_verizon">
+                <rect width="135.082" height="27.138" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+
+          <div className="flex items-center gap-1 opacity-50 hover:opacity-70 transition-opacity">
+            <svg width="54" height="49" viewBox="0 0 54 49" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 md:h-12 w-auto">
+              <path fillRule="evenodd" clipRule="evenodd" d="M26.7691 49C13.8228 49 7.10257 46.1866 3.07224 39.556C0.80395 35.7447 0 28.8936 0 24.4985C0 20.1034 0.80395 13.2628 3.07224 9.44255C7.10257 2.81192 13.8228 0 26.7691 0C39.7155 0 46.4417 2.81192 50.4645 9.44255C52.7313 13.2628 53.5352 20.1034 53.5352 24.4985C53.5352 28.8936 52.7313 35.7372 50.4645 39.556C46.4417 46.1866 39.7139 49 26.7691 49ZM33.2748 38.3481C31.8104 38.3481 29.6887 37.6987 28.6672 35.3917L22.2326 20.0379C20.8408 16.5781 23.5503 13.3357 26.6936 13.3357C28.1564 13.3357 30.2766 13.9866 31.2997 16.2921L37.7358 31.643C39.1261 35.1028 36.4196 38.3466 33.2748 38.3466V38.3481ZM20.33 38.3481C18.8687 38.3481 16.747 37.6987 15.7224 35.3917L9.28623 20.0379C7.89745 16.5781 10.6025 13.3357 13.7473 13.3357C15.2116 13.3357 17.3318 13.9866 18.3564 16.2921L24.791 31.643C26.1813 35.1028 23.4763 38.3466 20.33 38.3466V38.3481ZM41.3551 26.7489C39.8923 26.7489 37.7706 26.0981 36.7475 23.7911L35.1774 20.0394C33.7871 16.5796 36.4906 13.3372 39.6354 13.3372C41.0982 13.3372 43.2199 13.9881 44.243 16.2936L45.8176 20.0453C47.2094 23.5021 44.4999 26.7474 41.3551 26.7474V26.7489Z" fill="#7F7F7F"/>
+            </svg>
+            <div className="flex flex-col gap-0.5">
+              <svg width="116" height="12" viewBox="0 0 116 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-3 w-auto">
+                <path d="M5.8891 11.7526L7.9322 3.94384L9.9754 11.7526H12.5776L15.8629 0.00595999H13.2214L11.3475 7.36345C11.3186 7.51425 11.2812 7.66345 11.2357 7.81025V7.83405C11.2357 7.81615 11.2266 7.79835 11.2236 7.78195C11.176 7.63005 11.1381 7.47535 11.1103 7.31875L9.191 0H6.6795L4.7572 7.33515C4.7289 7.49205 4.691 7.64725 4.6439 7.79975C4.6411 7.81285 4.6375 7.82585 4.6333 7.83855C4.6315 7.82695 4.629 7.81555 4.6258 7.80425C4.5785 7.65275 4.5407 7.49855 4.5124 7.34255L2.6431 0.00595999H0L3.2868 11.7526H5.8891Z" fill="#7F7F7F"/>
+                <path d="M20.5453 11.7466L21.7044 8.76039H25.9523L27.1114 11.7466H29.8013L25.0229 0.10128L24.9821 0H22.6821L17.8629 11.7466H20.5453ZM23.551 3.98702L23.8276 3.19766L23.9787 3.6266L25.0864 6.51299H22.5748L23.551 3.98702Z" fill="#7F7F7F"/>
+                <path d="M41.204 3.39277C41.204 1.30022 39.5613 0 36.9167 0H31.8014V11.7466H34.313V7.11169H35.9118L38.5942 11.7466H41.4654L38.6259 6.83919C40.3366 6.16889 41.204 5.01022 41.204 3.39277ZM38.6909 3.55511C38.6909 4.44873 38.0864 4.89553 36.9167 4.89553H34.313V2.21468H36.9228C38.094 2.21468 38.6909 2.66596 38.6909 3.55511Z" fill="#7F7F7F"/>
+                <path d="M45.9119 4.03766L45.9391 4.08681C45.9903 4.18294 46.0474 4.27594 46.1099 4.36532L50.9944 11.7496H53.4644V0H51.0214V7.66429L50.9914 7.61209C50.9394 7.51599 50.8824 7.42299 50.8204 7.33359L45.9361 0H43.4653V11.7466H45.9104L45.9119 4.03766Z" fill="#7F7F7F"/>
+                <path d="M63.3254 6.80189V4.55447H57.9774V2.24745H63.7895V0H55.4644V11.7466H63.8394V9.50069H57.9774V6.80189H63.3254Z" fill="#7F7F7F"/>
+                <path d="M72.6635 6.83919C74.3745 6.16889 75.2324 5.01022 75.2324 3.39277C75.2324 1.30022 73.5904 0 70.9474 0H65.8394V11.7466H68.3514V7.11169H69.9484L72.6324 11.7466H75.5034L72.6635 6.83919ZM72.7225 3.55511C72.7225 4.44873 72.1264 4.89553 70.9484 4.89553H68.3514V2.21468H70.9544C72.1324 2.21468 72.7225 2.66596 72.7225 3.55511Z" fill="#7F7F7F"/>
+              </svg>
+              <svg width="86" height="13" viewBox="0 0 86 13" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-3 w-auto">
+                <path d="M6.1596 8.8051L2.5751 0H0V11.7481H2.4466V5.6387L2.6975 6.4102L5.0081 11.7481H7.3096L9.6263 6.3968L9.8711 5.6387V11.7481H12.3177V0H9.7426L6.1596 8.8051Z" fill="#7F7F7F"/>
+                <path d="M14.3177 0V7.2621C14.3177 10.1262 16.2474 11.976 19.2335 11.976C22.2196 11.976 24.1494 10.1262 24.1494 7.2621V0H21.6378V7.0491C21.6378 8.7098 20.7613 9.663 19.2335 9.663C17.7057 9.663 16.8292 8.7098 16.8292 7.0491V0H14.3177Z" fill="#7F7F7F"/>
+                <path d="M31.1876 9.9892C29.6251 9.9892 28.7441 9.1656 28.4161 7.3947L28.3768 7.1832L26.1494 8.3002L26.1766 8.4209C26.6904 10.8247 28.5234 12.2039 31.2043 12.2039C34.1496 12.2039 35.6895 10.3585 35.6895 8.5341C35.6895 6.5577 34.4805 5.4273 31.7679 4.8673C29.8487 4.4785 29.0992 4.0243 29.0992 3.2453C29.0992 2.4664 30.0558 2.2147 30.8748 2.2147C32.1503 2.2147 33.0177 2.8581 33.4529 4.13L33.5164 4.3147L35.5353 3.1709L35.4885 3.0443C34.7435 1.0232 33.2096 0 30.9307 0C28.3965 0 26.6994 1.3241 26.6994 3.2945C26.6994 5.1279 28.0701 6.4341 30.4562 6.8794C32.451 7.28 33.1915 7.7507 33.1915 8.616C33.1779 9.45 32.3966 9.9892 31.1876 9.9892Z" fill="#7F7F7F"/>
+                <path d="M40.2011 0H37.6895V11.7466H40.2011V0Z" fill="#7F7F7F"/>
+                <path d="M53.6631 9.0643L53.7491 8.9347L51.7651 7.5302L51.6781 7.6911C50.8811 9.1507 49.7481 9.8909 48.3111 9.8909C46.2451 9.8909 44.7471 8.2973 44.7471 6.1019C44.7471 3.9066 46.2451 2.313 48.3111 2.313C49.7921 2.313 50.8191 2.9996 51.5421 4.4741L51.6261 4.6468L53.6631 3.2007L53.6091 3.0815C52.7311 1.1453 50.7751 0 48.3771 0C44.7991 0 42.2011 2.5662 42.2011 6.1064C42.2011 9.6987 44.7071 12.2128 48.2941 12.2128C51.0081 12.2039 52.3181 11.057 53.6631 9.0643Z" fill="#7F7F7F"/>
+              </svg>
+            </div>
+          </div>
+
+          <svg width="138" height="43" viewBox="0 0 138 43" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-10 w-auto opacity-50 hover:opacity-70 transition-opacity">
+            <g clipPath="url(#clip0_cocacola)">
+              <path d="M95.9732 3.3019C95.9732 3.3019 93.4051 4.32489 90.4183 7.61895C87.4315 10.913 85.692 14.6172 86.9794 15.6022C87.4738 15.9767 88.6142 16.048 90.6834 14.1759C92.5929 12.5168 94.0918 10.4372 95.0622 8.10035C96.3986 4.83972 95.9732 3.34202 95.9732 3.30636M112.319 9.22809C109 7.52534 106.575 5.43925 104.051 4.14882C101.644 2.91187 100.087 2.39481 98.1403 2.65557C97.8688 2.70401 97.6009 2.77103 97.3385 2.85616C97.3385 2.85616 98.3408 6.28171 94.3517 12.0363C90.3114 17.8711 86.6453 17.831 85.6029 16.2285C84.5115 14.5369 85.9214 11.0891 88.2756 8.02012C90.7413 4.81075 95.0711 2.14965 95.0711 2.14965C95.0711 2.14965 93.6902 1.30496 90.3003 3.22835C86.9927 5.09603 81.2997 9.55348 76.0166 17.071C70.7335 24.5885 69.6866 28.725 68.9293 31.9812C68.1721 35.2373 68.8603 38.7253 72.4685 38.7253C76.0767 38.7253 80.2774 33.2181 81.4623 31.3036C83.6651 27.7377 85.1017 22.2684 82.1038 23.0195C80.6271 23.3894 79.431 25.0253 78.676 26.601C78.1993 27.6131 77.8348 28.6743 77.5891 29.7658C76.5415 30.1978 75.5576 30.7707 74.6646 31.4686C73.6712 32.2049 72.7428 33.0251 71.8894 33.9202C71.8894 33.9202 71.9028 31.317 73.9764 27.1047C76.05 22.8924 79.8565 20.969 82.0125 20.7885C83.9547 20.6325 86.4827 22.2817 84.34 28.3662C82.1973 34.4506 75.8763 41.8477 69.2367 41.9391C63.1094 42.0238 59.1003 34.1988 67.6286 20.5433C77.0679 5.45708 88.1398 0.828013 91.7346 0.313177C95.3295 -0.201659 96.4988 1.38519 96.4988 1.38519C98.6628 0.496836 101 0.111249 103.334 0.257459C107.724 0.55388 111.119 3.66295 115.6 5.84711C114.435 6.96147 113.324 8.13155 112.321 9.22809M132.042 4.14882C128.999 6.10118 124.79 7.87079 120.745 7.49191C119.72 8.55056 118.625 9.77636 117.527 11.1136C124.54 12.5021 130.685 8.15384 133.953 4.45192C135.144 3.12095 136.167 1.64863 137 0.068017C135.512 1.61842 133.847 2.98812 132.04 4.14882M122.701 23.9221C122.754 23.8295 122.797 23.7317 122.83 23.6301C122.809 23.4694 122.734 23.3207 122.617 23.2087C122.499 23.0968 122.347 23.0284 122.186 23.015C121.518 22.9838 120.607 23.1108 118.217 25.7586C116.234 27.9451 114.528 30.3673 113.137 32.9707C111.769 35.4714 111.214 37.3346 112.001 37.816C112.256 37.9484 112.552 37.9787 112.829 37.9007C113.361 37.7736 113.965 37.2744 114.883 36.2113C115.313 35.7121 115.789 35.0056 116.359 34.2233C117.941 32.0703 121.914 25.2928 122.701 23.9221Z" fill="#7F7F7F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_cocacola">
+                <rect width="138" height="43" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+
+          <svg width="153" height="44" viewBox="0 0 153 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-10 w-auto opacity-50 hover:opacity-70 transition-opacity">
+            <g clipPath="url(#clip0_directv)">
+              <path d="M8.21787 38.5863C11.8202 41.3434 16.3414 43 21.2469 43C26.6151 43 31.5089 41.0294 35.2438 37.7945C35.2892 37.7549 35.2667 37.7288 35.2221 37.7549C33.5462 38.8617 28.7692 41.2776 21.247 41.2776C14.7099 41.2776 10.5786 39.8354 8.24565 38.5478C8.20101 38.5259 8.18431 38.5591 8.21787 38.5863Z" fill="#7F7F7F"/>
+              <path d="M55.1644 15.9364H57.9367C59.2033 15.9364 60.0475 16.3292 60.6832 17.0861C61.3684 17.9245 61.4737 19.0975 61.4737 21.9174C61.4737 24.7348 61.3684 26.0665 60.6832 26.9026C60.0475 27.6588 59.2033 28.0522 57.9367 28.0522H55.1644V15.9364Z" fill="#7F7F7F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_directv">
+                <rect width="152.213" height="44" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+
+          <div className="opacity-50 hover:opacity-70 transition-opacity">
+            <div className="h-6 md:h-7 w-32 md:w-40 bg-gray-500/30 rounded flex items-center justify-center text-xs text-gray-400">
+              SAMSUNG
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
